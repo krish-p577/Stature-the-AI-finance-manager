@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StatureApplication",
+            "request": "launch",
+            "mainClass": "com.example.Krish.Stature.MainPage.StatureApplication",
+            "projectName": "Stature"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-StatureApplication<Stature>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.Krish.Stature.StatureApplication",
+            "projectName": "Stature",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
