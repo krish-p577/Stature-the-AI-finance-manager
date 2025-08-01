@@ -8,23 +8,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.Krish.Stature.MainPage.Model.User;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @Controller
 @SessionAttributes("User")
-@RequestMapping("Home")
+@RequestMapping
 public class HomeController {
 
     @Value("${spring.application.name}")
     private String appName;
  
-    @GetMapping("/")
+    @GetMapping
     public String get(Model model){
-        model.addAttribute("message", "this should be green");
+        model.addAttribute("message", "Enter your current income here:");
         model.addAttribute("user", new User());
-        
-
         return "index.html";
     }
+
+    @PostMapping("")
+    public String postMethodName(@RequestBody String entity) {
+        //TODO: process POST request
+        
+        return entity;
+    }
+    
+
+    
 }
 
 

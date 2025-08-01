@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> Stature </title>
+    </head>
+    <body>
+        <h1>Yeah</h1>
+
+        <h2 style="color:forestgreen" th:text="${message}">attributevalue will be placed here</h2>
+        <form method="POST", th:object="${user}">
+        
+            <label for="name">Type Message</label><br/>
+            <input type="text" th:field="*{name}"/>
+
+            <input type="submit" value="Go"/>
+       </form>
+    </body>
+</html>

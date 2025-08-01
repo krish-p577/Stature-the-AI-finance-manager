@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class User {
     
-    private String name;
+    public String name;
 
-    private long income; 
+    public long income; 
 
-    private long expences;
+    public long expences;
 
 
 }
