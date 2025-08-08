@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> Stature </title>
+    </head>
+    <body>
+        <h1>Yeah</h1>
+
+        <h2 style="color:forestgreen">Enter your yearly income here</h2>
+        <form method="POST", th:object="${user}">
+            <label for="income"></label><br/>
+            <input type="text" th:field="*{income}"/>
+            
+            <h3> Enter your montly expences here</h3>
+            <input type="text" th:field="*{expences}"/>
+
+            <input type="submit" value="submit"/>
+       </form>
+       
+       <h3 style="color:rgb(40, 86, 43)" th:text="${income}"></h3>
+       <h3 style="color:rgb(86, 40, 52)" th:text="${expences}"></h3>
+    </body>
+</html>
