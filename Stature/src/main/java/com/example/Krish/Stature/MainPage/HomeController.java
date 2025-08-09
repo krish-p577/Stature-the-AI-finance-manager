@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.Krish.Stature.MainPage.Model.User;
+
+import lombok.experimental.var;
+
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -24,7 +27,6 @@ public class HomeController {
     public String Home(Model model){
         model.addAttribute("user", new User());
         model.addAttribute("name", "Enter your yearly income here:");
-        // model.addAttribute("income", "fake values");
         model.addAttribute("expences", "Enter your monthly expences here, click the plus to add more");
         return "home.html";
     }
@@ -39,9 +41,12 @@ public class HomeController {
         return "home.html";
     }
     
-    @GetMapping("option")
-    public String option(Model model) {
-        return new String();
+    @GetMapping("/type")
+    public String option(@ModelAttribute User user, Model model) {
+        Object income = model.getAttribute("income");
+        model.addAttribute("check", "you got " + income + " income");
+
+        return "type.html";
     }
     
 }

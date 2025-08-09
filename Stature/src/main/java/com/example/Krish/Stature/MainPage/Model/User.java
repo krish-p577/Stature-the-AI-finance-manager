@@ -11,5 +11,11 @@ public class User {
 
     public long expences;
 
+    public Boolean longTerm;
+     
+    public Boolean investment;
+
+    
+
 
 }
